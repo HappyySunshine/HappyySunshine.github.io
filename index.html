@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helloo!!</title>
     <script src="https://unpkg.com/navigo@7.1.2/dist/navigo.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="home" class="route">
-        <h1>Home Page</h1>
-        <a href="/about" data-route="true">About</a>
-      </div>
+      <h1>Home Page</h1>
+      <a href="/about" data-route="true">About</a>
+    </div>
     <script>
-        const router = new Navigo('/');
-        router.on({
-        '/': () => showRoute('home'),
-        '/img.webp': () => {
-            // This will work if the file exists in your repo
-            window.location.href = 'img.webp';
-        },
-        '/important.mp3': () =>{
-            window.location.href = 'important.mp3';
-        }
-        }).resolve();
+      const router = new Navigo('/');
+      router.on({
+      '/': () => showRoute('home'),
+      '/img.webp': () => {
+          // This will work if the file exists in your repo
+          window.location.href = 'img.webp';
+      },
+      '/important.mp3': () =>{
+          window.location.href = 'important.mp3';
+      },
+      '/important2.mp3': () =>{
+          window.location.href = 'important2.mp3';
+      },
+      }).resolve();
     </script>
-</body>
+  </body>
 </html>
+
